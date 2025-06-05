@@ -1,0 +1,1108 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo kiểm tra Website Nâng cao - 05/06/2025 07:10:04</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; }
+        .header h1 { margin: 0; font-size: 2.5em; font-weight: 300; }
+        .header p { margin: 10px 0 0 0; opacity: 0.9; }
+        .content { padding: 30px; }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .summary-card { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .summary-card h3 { margin: 0 0 15px 0; font-size: 14px; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+        .summary-card .value { font-size: 32px; font-weight: bold; margin-bottom: 5px; }
+        .summary-card .unit { font-size: 14px; opacity: 0.8; }
+        .health-score { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important; }
+        .page-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 25px; }
+        .page-card { background: #f8f9fa; border-radius: 12px; padding: 25px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .page-card:hover { transform: translateY(-2px); }
+        .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .page-title { font-size: 18px; font-weight: bold; color: #333; }
+        .status-badge { padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: bold; text-transform: uppercase; }
+        .status-excellent { background: #d4edda; color: #155724; }
+        .status-good { background: #fff3cd; color: #856404; }
+        .status-fair { background: #f8d7da; color: #721c24; }
+        .status-poor { background: #f5c6cb; color: #721c24; }
+        .status-error { background: #f8d7da; color: #721c24; }
+        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .metric { text-align: center; padding: 15px; background: white; border-radius: 8px; }
+        .metric-value { font-size: 20px; font-weight: bold; color: #333; }
+        .metric-label { font-size: 12px; color: #666; margin-top: 5px; }
+        .issues { margin-top: 20px; }
+        .issue-list { background: #fff; border-radius: 8px; padding: 15px; margin-top: 10px; }
+        .issue-item { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+        .issue-item:last-child { border-bottom: none; }
+        .screenshot { text-align: center; margin-top: 20px; }
+        .screenshot img { max-width: 100%; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); }
+        .no-issues { color: #28a745; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Báo cáo kiểm tra Website Nâng cao</h1>
+            <p>Thời gian kiểm tra: 05/06/2025 07:10:04</p>
+        </div>
+        
+        <div class="content">
+            <div class="summary">
+                <div class="summary-card">
+                    <h3>Tổng số trang</h3>
+                    <div class="value">12</div>
+                </div>
+                <div class="summary-card health-score">
+                    <h3>Điểm sức khỏe</h3>
+                    <div class="value">10.0</div>
+                    <div class="unit">/ 100</div>
+                </div>
+                <div class="summary-card">
+                    <h3>Trang xuất sắc</h3>
+                    <div class="value">0</div>
+                </div>
+                <div class="summary-card">
+                    <h3>Thời gian tải TB</h3>
+                    <div class="value">2203.82</div>
+                    <div class="unit">ms</div>
+                </div>
+                <div class="summary-card">
+                    <h3>Lỗi JavaScript</h3>
+                    <div class="value">55</div>
+                </div>
+                <div class="summary-card">
+                    <h3>Vấn đề Accessibility</h3>
+                    <div class="value">13</div>
+                </div>
+            </div>
+            
+            <div class="page-grid">
+
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Trang chủ</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">3122.07</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">10</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">header</div><div class="issue-item">main</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">... và 5 lỗi khác</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Danh sách sản phẩm</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">2459.2</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">9</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">h1</div><div class="issue-item">.product-grid</div><div class="issue-item">.filter</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">... và 4 lỗi khác</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Giỏ hàng</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">2334.66</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">8</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">h1</div><div class="issue-item">.cart-container</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">... và 3 lỗi khác</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Thanh toán</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">2336.78</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">7</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">form</div><div class="issue-item">input</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">... và 2 lỗi khác</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Tìm kiếm</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">2049.22</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">6</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">input[type='search']</div><div class="issue-item">.search-results</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">... và 1 lỗi khác</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Danh mục</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">2434.3</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">5</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">.category-grid</div><div class="issue-item">h1</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Giới thiệu</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">1347.88</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">4</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">h1</div><div class="issue-item">.about-content</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Liên hệ</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">2013.51</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">form</div><div class="issue-item">input[type='email']</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Đăng nhập</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">2315.57</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">form</div><div class="issue-item">input[type='email']</div><div class="issue-item">input[type='password']</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div><div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Đăng ký</div>
+                        <div class="status-badge status-error">error</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">1889.48</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">form</div><div class="issue-item">input[type='email']</div></div>
+                        <h4>🐛 JavaScript Errors:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">./src/app/products/[id]/page.tsx:10:1
+Export default doesn't exist in target module
+   8 | import { api } from '~/trpc/react';
+   9 | import { useCart } from '~/contexts/CartContext';
+> 10 | import LoadingStates from '~/components/LoadingStates';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |
+  12 | interface ProductDetailProps {
+  13 |   params: {
+
+The export default was not found in module [project]/src/components/LoadingStates.tsx [app-client] (ecmascript).
+Did you mean to import SkeletonText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">No headings found</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Dashboard Admin</div>
+                        <div class="status-badge status-fair">fair</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">2830.41</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">0</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">0</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">nav</div><div class="issue-item">.dashboard</div></div>
+                    </div>
+                </div>
+            
+                <div class="page-card">
+                    <div class="page-header">
+                        <div class="page-title">Cài đặt Admin</div>
+                        <div class="status-badge status-fair">fair</div>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">1312.71</div>
+                            <div class="metric-label">Load Time (ms)</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Missing Elements</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">0</div>
+                            <div class="metric-label">JS Errors</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3</div>
+                            <div class="metric-label">A11y Issues</div>
+                        </div>
+                    </div>
+                    
+                    <div class="issues">
+            
+                        <h4>⚠️ Missing Elements:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">form</div><div class="issue-item">.settings</div></div>
+                        <h4>♿ Accessibility Issues:</h4>
+                        <div class="issue-list">
+                <div class="issue-item">Input 1 missing label</div><div class="issue-item">Input 2 missing label</div><div class="issue-item">Input 3 missing label</div></div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+        

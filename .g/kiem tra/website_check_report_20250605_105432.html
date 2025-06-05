@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo kiểm tra Website - 05/06/2025 10:54:32</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; text-align: center; border-bottom: 3px solid #007bff; padding-bottom: 10px; }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .summary-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; text-align: center; }
+        .summary-card h3 { margin: 0 0 10px 0; font-size: 14px; opacity: 0.9; }
+        .summary-card .value { font-size: 24px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f8f9fa; font-weight: bold; }
+        .status-success { color: #28a745; font-weight: bold; }
+        .status-error { color: #dc3545; font-weight: bold; }
+        .status-warning { color: #ffc107; font-weight: bold; }
+        .status-info { color: #17a2b8; font-weight: bold; }
+        .page-type-client { background-color: #e3f2fd; }
+        .page-type-admin { background-color: #fff3e0; }
+        .response-time { font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Báo cáo kiểm tra Website</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            Thời gian kiểm tra: 05/06/2025 10:54:32
+        </p>
+        
+        <div class="summary">
+            <div class="summary-card">
+                <h3>Tổng số trang</h3>
+                <div class="value">17</div>
+            </div>
+            <div class="summary-card">
+                <h3>Thành công</h3>
+                <div class="value">4</div>
+            </div>
+            <div class="summary-card">
+                <h3>Lỗi</h3>
+                <div class="value">13</div>
+            </div>
+            <div class="summary-card">
+                <h3>Tỷ lệ thành công</h3>
+                <div class="value">23.53%</div>
+            </div>
+            <div class="summary-card">
+                <h3>Thời gian phản hồi TB</h3>
+                <div class="value">3970.58ms</div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Loại</th>
+                    <th>URL</th>
+                    <th>Trạng thái</th>
+                    <th>Mã HTTP</th>
+                    <th>Thời gian (ms)</th>
+                    <th>Kích thước</th>
+                    <th>Lỗi</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/" target="_blank">/</a></td>
+                    <td class="status-success">Success</td>
+                    <td>200</td>
+                    <td class="response-time">1166.05</td>
+                    <td>114631 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/products" target="_blank">/products</a></td>
+                    <td class="status-success">Success</td>
+                    <td>200</td>
+                    <td class="response-time">3925.51</td>
+                    <td>103485 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/products/1" target="_blank">/products/1</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">6245.05</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/cart" target="_blank">/cart</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">3060.4</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/checkout" target="_blank">/checkout</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">3198.61</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/checkout/success" target="_blank">/checkout/success</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">2870.93</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/search" target="_blank">/search</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">3640.42</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/categories" target="_blank">/categories</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">3376.88</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/about" target="_blank">/about</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">3505.69</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/contact" target="_blank">/contact</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">2913.93</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/auth/signin" target="_blank">/auth/signin</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">3422.12</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/auth/signup" target="_blank">/auth/signup</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">5259.87</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/auth/forgot-password" target="_blank">/auth/forgot-password</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">5738.18</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/account" target="_blank">/account</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">5649.95</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-client">
+                    <td>CLIENT</td>
+                    <td><a href="http://localhost:3001/nonexistent-page" target="_blank">/nonexistent-page</a></td>
+                    <td class="status-error">Server Error</td>
+                    <td>500</td>
+                    <td class="response-time">8143.4</td>
+                    <td>7164 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-admin">
+                    <td>ADMIN</td>
+                    <td><a href="http://localhost:3002/" target="_blank">/</a></td>
+                    <td class="status-success">Success</td>
+                    <td>200</td>
+                    <td class="response-time">1481.73</td>
+                    <td>54141 bytes</td>
+                    <td></td>
+                </tr>
+            
+                <tr class="page-type-admin">
+                    <td>ADMIN</td>
+                    <td><a href="http://localhost:3002/settings" target="_blank">/settings</a></td>
+                    <td class="status-success">Success</td>
+                    <td>200</td>
+                    <td class="response-time">3901.06</td>
+                    <td>18650 bytes</td>
+                    <td></td>
+                </tr>
+            
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+            <h3>📝 Ghi chú:</h3>
+            <ul>
+                <li><strong>Client:</strong> Ứng dụng web chính (localhost:3001)</li>
+                <li><strong>Admin:</strong> Dashboard quản trị (localhost:3002)</li>
+                <li><strong>Success:</strong> Trang tải thành công (HTTP 200)</li>
+                <li><strong>Not Found:</strong> Trang không tồn tại (HTTP 404)</li>
+                <li><strong>Error:</strong> Lỗi server hoặc kết nối</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+        

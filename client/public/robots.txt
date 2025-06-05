@@ -1,0 +1,70 @@
+# Robots.txt for E-commerce 3D Store
+# https://your-domain.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow private/admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /checkout/
+Disallow: /account/
+Disallow: /cart/
+Disallow: /login/
+Disallow: /register/
+Disallow: /reset-password/
+
+# Allow important pages
+Allow: /
+Allow: /categories
+Allow: /products
+Allow: /about
+Allow: /contact
+Allow: /help
+Allow: /search
+
+# Allow category pages
+Allow: /categories/*
+Allow: /products/*
+
+# Disallow search parameters and filters
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /search?*
+Disallow: /categories?*
+Disallow: /products?*
+
+# Allow specific search parameters that are useful for SEO
+Allow: /search?q=*
+Allow: /categories?category=*
+Allow: /products?category=*
+
+# Disallow temporary and test pages
+Disallow: /test/
+Disallow: /temp/
+Disallow: /staging/
+Disallow: /dev/
+
+# Disallow duplicate content
+Disallow: /print/
+Disallow: /mobile/
+
+# Crawl-delay for different bots
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 2
+
+User-agent: Slurp
+Crawl-delay: 3
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Additional sitemaps (if you have them)
+# Sitemap: https://your-domain.com/sitemap-products.xml
+# Sitemap: https://your-domain.com/sitemap-categories.xml
+# Sitemap: https://your-domain.com/sitemap-images.xml
